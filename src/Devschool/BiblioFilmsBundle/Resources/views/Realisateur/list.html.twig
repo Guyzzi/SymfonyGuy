@@ -8,33 +8,36 @@
             <div class="col-md-3">
                 <p class="lead">Cinéma</p>
                 <div class="list-group">
-                    <a href="cinema-films.html" class="list-group-item active">Films</a>
-                    <a href="cinema-realisateurs.html" class="list-group-item">Réalisateurs</a>
+                    <a href="{{ path('page_films') }}" class="list-group-item">Films</a>
+                    <a href="{{ path('page_realisateurs') }}" class="list-group-item">Réalisateurs</a>
                 </div>
             </div>
 
 			<div class="col-md-9">
-						
-				<h2>Liste des films</h2>
-							
-					<br />
 
 
-			    {% for film in films %}
 
-					<div class="thumbnail">
-			            <div class="caption-full">
-				        	<h4 class="pull-right">{{ film.genre }}</h4>
-				        	<h4><a href="{{ path('page_film', {'id': film.id}) }}">{{ film.titre }}</a></h4>
-				            <p>{{ film.synopsis }}</p>
-				        </div>
-			            <div class="ratings">
-			                <p class="pull-right">sorti le {{ film.dateSortie|date('d/m/Y') }}</p>
-			                <p>Réalisé par : <a href="cinema-films-realisateur.html">{{ film.realisateur }}</a></p>
-			            </div>
-			        </div>
+				<h2>Liste des réalisateurs</h2>
+				
+				<br />
+				
+				{% for realisateur in realisateurs %}
 
-			    {% endfor %}
+				<div class="well">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong>{{ realisateur.Nom }} </strong> ({{ 2016-realisateur.Age|date('Y') }} ans)<br />
+							<br />
+							<p>{{ realisateur.Bio }}</p>
+							<hr />
+							<div class="text-right">
+								<a href="cinema-films-realisateur.html" class="btn btn-success">Voir ses films</a>
+							</div>
+						</div>
+                    </div>
+				</div>
+
+				{% endfor %}
 
 			</div>
 

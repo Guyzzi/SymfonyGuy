@@ -8,10 +8,11 @@
 
 <h1>{{ film.titre }}</h1>
 
-<span>Réaliser par {{ film.realisateur }}</span>
+<span>Réaliser par {{ film.realisateur }}</span> </br></br>
 
 <p>{{ film.synopsis }}</p>
 
+<p>Sorti le {{ film.dateSortie|date('d/m/Y') }}</p>
 
 
 

@@ -43,4 +43,19 @@ class DefaultController extends Controller
         	);
     }
 
+    /**
+    * @Route("/realisateurs", name="page_realisateurs")
+    */
+    public function listAction1()
+    {
+
+        $realisateurs = $this->getDoctrine()->getRepository('DevschoolBiblioFilmsBundle:Realisateur')->findAll();
+
+        $titre_de_la_page = 'Les réalisateurs';
+
+        return $this->render('DevschoolBiblioFilmsBundle:Realisateur:list.html.twig',
+        ['realisateurs' => $realisateurs,  'titre' => $titre_de_la_page]
+        );
+    }
+
 }

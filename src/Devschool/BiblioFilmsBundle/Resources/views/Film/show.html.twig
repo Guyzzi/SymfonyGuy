@@ -1,0 +1,24 @@
+{% extends 'DevschoolBiblioFilmsBundle::layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+        <div class="row">
+
+<h1>{{ film.titre }}</h1>
+
+<span>Réaliser par {{ film.realisateur }}</span>
+
+<p>{{ film.synopsis }}</p>
+
+
+
+
+<p><a href="{{ path('page_films') }}">Retour</a></p>
+
+		</div>
+		
+</dive>
+
+{% endblock %}

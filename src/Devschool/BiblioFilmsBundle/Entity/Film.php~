@@ -254,28 +254,5 @@ class Film
         return $this->realisateurID;
     }
 
-
-    /**
-     * Set genres
-     *
-     * @param \Devschool\BiblioFilmsBundle\Entity\Genres $genres
-     *
-     * @return Film
-     */
-    public function setGenres(\Devschool\BiblioFilmsBundle\Entity\Genres $genres = null)
-    {
-        $this->genres = $genres;
-
-        return $this;
-    }
-
-    /**
-     * Get genres
-     *
-     * @return \Devschool\BiblioFilmsBundle\Entity\Genres
-     */
-    public function getGenres()
-    {
-        return $this->genres;
-    }
 }
+

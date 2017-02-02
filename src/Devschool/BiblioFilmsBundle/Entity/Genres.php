@@ -33,7 +33,6 @@ class Genres
     */
     private $films;
 
-
     /**
      * Get id
      *

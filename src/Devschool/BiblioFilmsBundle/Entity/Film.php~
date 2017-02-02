@@ -57,13 +57,6 @@ class Film
     private $genre;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="genre_id", type="string", length=255)
-     */
-    private $genreId;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="realisateur_id", type="integer", length=255)
@@ -207,30 +200,6 @@ class Film
     }
 
     /**
-     * Set genreID
-     *
-     * @param string $genreID
-     *
-     * @return Film
-     */
-    public function setGenreID($genreID)
-    {
-        $this->genreID = $genreID;
-
-        return $this;
-    }
-
-    /**
-     * Get genreID
-     *
-     * @return string
-     */
-    public function getGenreID()
-    {
-        return $this->genreID;
-    }
-
-    /**
      * Set realisateurID
      *
      * @param int $realisateurID
@@ -254,5 +223,28 @@ class Film
         return $this->realisateurID;
     }
 
-}
 
+    /**
+     * Set genres
+     *
+     * @param \Devschool\BiblioFilmsBundle\Entity\Genres $genres
+     *
+     * @return Film
+     */
+    public function setGenres(\Devschool\BiblioFilmsBundle\Entity\Genres $genres = null)
+    {
+        $this->genres = $genres;
+
+        return $this;
+    }
+
+    /**
+     * Get genres
+     *
+     * @return \Devschool\BiblioFilmsBundle\Entity\Genres
+     */
+    public function getGenres()
+    {
+        return $this->genres;
+    }
+}

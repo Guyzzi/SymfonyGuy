@@ -9,7 +9,7 @@
                 <p class="lead">Cinéma</p>
                 <div class="list-group">
                     <a href="{{ path('page_films') }}" class="list-group-item">Films</a>
-                    <a href="{{ path('page_realisateurs') }}" class="list-group-item">Réalisateurs</a>
+                    <a href="{{ path('page_realisateurs') }}" class="list-group-item active">Réalisateurs</a>
                 </div>
             </div>
 
@@ -17,7 +17,7 @@
 
 
 
-				<h2>Liste des réalisateurs</h2>
+				<h2>Liste des réalisateurs </h2>
 				
 				<br />
 				
@@ -31,7 +31,7 @@
 							<p>{{ realisateur.Bio }}</p>
 							<hr />
 							<div class="text-right">
-								<a href="cinema-films-realisateur.html" class="btn btn-success">Voir ses films</a>
+								<a href="{{ path('page_realisateur', {'id': realisateur.id}) }}" class="btn btn-success">Voir ses films</a>
 							</div>
 						</div>
                     </div>

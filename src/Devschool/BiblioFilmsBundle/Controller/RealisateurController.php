@@ -22,4 +22,17 @@ class RealisateurController extends Controller {
         );
     }
 
+    /**
+    * @Route("/realisateur/{id}", requirements={"id": "\d+"}, name="page_realisateur")
+    */
+    public function showAction($id)
+    {
+
+        $films = $this->getDoctrine()->getRepository('DevschoolBiblioFilmsBundle:Film')->findByrealisateurId($id);
+
+        return $this->render('DevschoolBiblioFilmsBundle:Realisateur:show.html.twig',
+        ['films' => $films]
+        	);
+    }
+
 }

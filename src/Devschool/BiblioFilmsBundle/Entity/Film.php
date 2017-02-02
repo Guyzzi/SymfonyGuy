@@ -56,6 +56,20 @@ class Film
      */
     private $genre;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="genre_id", type="string", length=255)
+     */
+    private $genreId;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="realisateur_id", type="integer", length=255)
+     */
+    private $realisateurId;
+
 
     /**
      * Get id
@@ -186,5 +200,54 @@ class Film
     {
         return $this->genre;
     }
+
+    /**
+     * Set genreID
+     *
+     * @param string $genreID
+     *
+     * @return Film
+     */
+    public function setGenreID($genreID)
+    {
+        $this->genreID = $genreID;
+
+        return $this;
+    }
+
+    /**
+     * Get genreID
+     *
+     * @return string
+     */
+    public function getGenreID()
+    {
+        return $this->genreID;
+    }
+
+    /**
+     * Set realisateurID
+     *
+     * @param int $realisateurID
+     *
+     * @return Film
+     */
+    public function setRealisateurID($realisateurID)
+    {
+        $this->realisateurID = $realisateurID;
+
+        return $this;
+    }
+
+    /**
+     * Get realisateurID
+     *
+     * @return int
+     */
+    public function getRealisateurID()
+    {
+        return $this->realisateurID;
+    }
+
 }
 

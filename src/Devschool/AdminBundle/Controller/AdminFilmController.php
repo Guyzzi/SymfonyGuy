@@ -13,6 +13,7 @@ use Devschool\AdminBundle\Form\FilmType;
  */
 class AdminFilmController extends Controller
 {
+	
     /**
      * @Route("/ajout", name="admin_film_ajout")
      */
@@ -84,7 +85,7 @@ class AdminFilmController extends Controller
      */
     public function deleteAction($id)
     {
-        $film = $this->getDoctrine()->getRepository('DevschoolBiblioBundle:Film')->find($id);
+        $film = $this->getDoctrine()->getRepository('DevschoolBiblioFilmsBundle:Film')->find($id);
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($film);

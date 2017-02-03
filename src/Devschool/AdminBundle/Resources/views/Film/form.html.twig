@@ -1,3 +1,18 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+{% extends 'DevschoolAdminBundle::layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+        <div class="row text-center">
+				<div class="col-md-12">
+						
+
+				{{ form_start(form) }}
+				{{ form_widget(form, { 'attr': {'class': 'foo'} }) }}
+				{{ form_end(form) }}
+
+			</div>
+		</div>
+</div>
+
+{% endblock %}

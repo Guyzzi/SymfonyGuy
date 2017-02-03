@@ -43,13 +43,6 @@ class Film
     private $dateSortie;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="genre", type="string", length=255)
-     */
-    private $genre;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="realisateur_id", type="integer", length=255)
@@ -170,30 +163,6 @@ class Film
     public function getDateSortie()
     {
         return $this->dateSortie;
-    }
-
-    /**
-     * Set genre
-     *
-     * @param string $genre
-     *
-     * @return Film
-     */
-    public function setGenre($genre)
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
-
-    /**
-     * Get genre
-     *
-     * @return string
-     */
-    public function getGenre()
-    {
-        return $this->genre;
     }
 
     /**

@@ -1,1 +1,17 @@
-Hello World!
+{% extends 'DevschoolAdminBundle::layout.html.twig' %}
+
+{% block body %}
+
+	<nav class="shelf">
+		
+		<a href="{{ path('admin_film_liste') }}" class="button button2" style="position: absolute; left: 150px;">Ajouter un Film</a>
+		<a href="" class="button button2" style="position: absolute; left: 150px; margin-top: 100px;padding-right: 24px;">Ajouter un Genre</a>
+		<a href="" class="button button2" style="position: absolute;left: 150px;margin-top: 200px;padding-right: 34px;height: 80px;width: 196px;padding-left: 34px;">Ajouter un </br> Realisateur </a>
+
+	  <span class="door left"></span>
+	  <span class="door right"></span>
+	</nav>
+	<h1>A D M I N - P A G E</h1>
+
+
+{% endblock %}

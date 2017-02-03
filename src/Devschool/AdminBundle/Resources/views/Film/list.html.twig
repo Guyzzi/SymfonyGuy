@@ -1,10 +1,38 @@
-<h1>Liste des films :</h1>
-<ul>
-    {% for film in films %}
-        <li>
-            <a href="{{ path('admin_film_modif', {'id': film.id}) }}">{{ film.titre }}</a>
-            <a href="{{ path('admin_film_supprimer', {'id': film.id}) }}">(x)</a>
-        </li>
-    {% endfor %}
-</ul>
-<a href="{{ path('admin_film_ajout') }}">Ajouter</a>
+{% extends 'DevschoolAdminBundle::layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+        <div class="row text-center">
+
+
+			<div class="col-md-12">
+						
+				<h1>Liste des films :</h1>
+							
+					<br />
+
+
+			    {% for film in films %}
+
+					<div class="thumbnail" style="padding: 5px;">
+
+						<a href="{{ path('admin_film_modif', {'id': film.id}) }}">{{ film.titre }}</a>
+						<a href="{{ path('admin_film_supprimer', {'id': film.id}) }}"> (x) </a>
+			        </div>
+
+			    {% endfor %}
+
+			</div>
+
+		</div>
+
+</div>
+
+<a href="{{ path('admin_film_ajout') }}" type="button" class="btn btn-danger">Ajouter</a>
+
+
+{% endblock %}
+
+

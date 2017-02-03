@@ -49,6 +49,11 @@ class Realisateur
      */
     private $sesFilms;
 
+    /**
+    * @ORM\OneToMany(targetEntity="Film", mappedBy="realisateur")
+    */
+    private $films;
+
 
     /**
      * Get id
@@ -58,6 +63,10 @@ class Realisateur
     public function getId()
     {
         return $this->id;
+    }
+
+    public function __toString() {
+        return $this->nom;
     }
 
     /**

@@ -36,13 +36,6 @@ class Film
     private $synopsis;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="realisateur", type="string", length=255)
-     */
-    private $realisateur;
-
-    /**
      * @var \Date
      *
      * @ORM\Column(name="date_sortie", type="date")
@@ -68,6 +61,10 @@ class Film
     */
     private $genres;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="Realisateur", inversedBy="films")
+    */
+    private $realisateur;
 
     /**
      * Get id

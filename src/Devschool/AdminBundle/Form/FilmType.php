@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class LivreType extends AbstractType
+class FilmType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -14,7 +14,7 @@ class LivreType extends AbstractType
             ->add('titre')
             ->add('synopsis')
             ->add('realisateur')
-            ->add('nombre_pages')
+            ->add('dateSortie')
             ->add('genres')
             ->add('save', SubmitType::class, array('label' => 'Enregistrer'))
         ;

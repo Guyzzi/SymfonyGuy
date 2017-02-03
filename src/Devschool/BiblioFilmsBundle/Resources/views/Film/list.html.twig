@@ -30,7 +30,7 @@
 				        </div>
 			            <div class="ratings">
 			                <p class="pull-right">sorti le {{ film.dateSortie|date('d/m/Y') }}</p>
-			                <a href=""><p> Réalisé par : {{ film.realisateur }} </p></a>
+			                <p> Réalisé par : <a href="{{ path('page_realisateur', {'id': film.realisateur.id}) }}">{{ film.realisateur }}</a> </p>
 			            </div>
 			        </div>
 
